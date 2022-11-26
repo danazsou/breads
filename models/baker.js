@@ -1,7 +1,6 @@
 // dependencies
 const mongoose = require('mongoose')
 const { Schema } = mongoose
-const Bread = require('./bread')
 
 // schema
 const bakerSchema = new Schema({
@@ -16,6 +15,7 @@ const bakerSchema = new Schema({
     },
     bio: String
 })
+
 
 
 // model and export
