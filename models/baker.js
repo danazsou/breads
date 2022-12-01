@@ -18,15 +18,18 @@ const bakerSchema = new Schema(
       bio: String,
     },
     { toJSON: { virtuals: true } }
-  );
+  )
   
-  // VIRTUALS:
-  bakerSchema.virtual("breads", {
-    ref: "Bread",
-    localField: "_id",
-    foreignField: "baker",
-  });
+
+
+// Virtuals:
+bakerSchema.virtual('breads', {
+    ref: 'Bread',
+    localField: '_id',
+    foreignField: 'baker'
+})
+
   
   // MODEL & EXPORT
-  const Baker = mongoose.model("Baker", bakerSchema);
+  const Baker = mongoose.model('Baker', bakerSchema);
   module.exports = Baker;
